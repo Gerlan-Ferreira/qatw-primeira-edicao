@@ -1,0 +1,80 @@
+1 - Acessar: https://github.com/ComunidadeTechQA/qatw-primeira-edicao
+
+2 - Instalar docker desktop caso não tenha: https://dev.to/papitofernando/instalando-o-docker-no-windows-10-home-ou-professional-com-wsl-2-26m3
+
+3 - Instalar wsl, depois instalar distribuição ubuntu. 
+
+- meu usuário: gerlan
+- senha: root@123
+
+4 - No mailtrap, após criar a conta:
+
+- capturar o id da inbox que fica na url, colar no dockercompose em MAILTRAP_ACCOUNT_ID e MAILTRAP_INBOX_ID
+
+- vai na aba API e copia o token da inbox e cola no dockercompose em MAILTRAP_TOKEN
+
+5 - Acessa a pasta do projeto e roda: docker-compose up -d
+
+6 - Edita o arquivo hosts do windows e cola tudo o que tem dentro do arquivo hosts da pasta utils do projeto, para que seja roteado 
+todo o projeto.
+
+7 - clonar o projeto do git na sua maquina usando o ssh do git.
+
+ -  criar a chave ssh: ssh-keygen -t rsa -b 4096
+ - pegar o ssh: cat /c/Users/ferre/.ssh/id_rsa.pub
+ - vai no GitHub e adiciona essa chave ssh
+ - depois disso clona o projeto como ssh na sua maquina
+
+8 - https://playwright.dev/docs/intro
+
+9 - Comandos básicos do playwright: 
+
+  yarn playwright test
+    Runs the end-to-end tests.
+
+  yarn playwright test --ui
+    Starts the interactive UI mode.
+
+  yarn playwright test --project=chromium
+    Runs the tests only on Desktop Chrome.
+
+  yarn playwright test example
+    Runs the tests in a specific file.
+
+  yarn playwright test --debug
+    Runs the tests in debug mode.
+
+  yarn playwright codegen
+    Auto generate tests with Codegen.
+
+We suggest that you begin by typing:
+
+    yarn playwright test
+
+
+To open last HTML report run:
+
+  yarn playwright show-report
+
+
+10 - Comando para abrir o record play para que ao manusear a página o playwright já vá gerando o código do teste de maneira automática :  
+
+- yarn playwright codegen http://paybank-mf-auth:3000/
+
+11 - Executar o teste no modo assistido para abrir o navegador e vc ver o que ele ta fazendo:  yarn playwright test --headed
+
+12 - Executar o teste no modo onde abre a interface gráfica do playwight e vc executa e acompanha o teste:   yarn playwright test --ui
+
+13 - Executar em modo debug:  yarn playwright test --debug
+
+
+14 - Caso ao tentar logar o sistema apresente a mensagem: "Acesso negado" mesmo com a senha certa é por que o container de autenticação está bugado, e para resolver tem que derrubar e subir de novo os containers. Com o seguinte comando:
+
+docker compose down
+
+docker compose up -d
+
+15 - Instalar pacote para conectar o projeto feito em JS ao banco de dados postgre: 
+
+yarn add pg-promise
+

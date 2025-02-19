@@ -1,0 +1,18 @@
+{
+  "name": "qatw-primeira-edicao",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:Gerlan-Ferreira/qatw-primeira-edicao.git",
+  "author": "gerlan <gerlan.ferr@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@playwright/test": "^1.50.1",
+    "@types/node": "^22.13.4"
+  },
+  "scripts": {},
+  "packageManager": "yarn@1.22.22+sha1.ac34549e6aa8e7ead463a7407e1c7390f61a6610",
+  "dependencies": {
+    "bullmq": "^5.41.2",
+    "pg-promise": "^11.10.2"
+  }
+}
