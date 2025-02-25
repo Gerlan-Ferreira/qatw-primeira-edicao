@@ -78,3 +78,11 @@ docker compose up -d
 
 yarn add pg-promise
 
+16 - Após instalar todo o Jenkins via docker file, ao abrir o Jenkins no navegador ele necessita da senha inicial do administrador, que fica na pasta: /var/jenkins_home/secrets/initialAdminPassword
+
+- Abrir o terminal e executar o comando: docker exec -it jenkins-server bash 
+- Esse comando serve para entrar dentro do container do Jenkins via terminal bash
+
+- Após isso, roda o comando:  cat /var/jenkins_home/secrets/initialAdminPassword
+- Serve para pegar a senha inicial do adm para colar no jekins e seguir com a configuração inicial.
+
