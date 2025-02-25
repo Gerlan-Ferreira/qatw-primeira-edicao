@@ -92,7 +92,7 @@ yarn add pg-promise
 
 18 - Compilar nova imagem seguindo as intrucoes do Dockerfile: 
 
-docker build -t papitodev/playwright-nj-v1.50.1-noble .
+docker build -t gerlanferreira/playwright-nj-v1.50.1-noble .
 
 19 - Logar na conta docker pra subir a imagem:
 
@@ -100,5 +100,5 @@ docker login
 
 20 - Subir a imagem para o docker:
 
-docker push papitodev/playwright-nj-v1.50.1-noble
+docker push gerlanferreira/playwright-nj-v1.50.1-noble
 
