@@ -86,3 +86,7 @@ yarn add pg-promise
 - Após isso, roda o comando:  cat /var/jenkins_home/secrets/initialAdminPassword
 - Serve para pegar a senha inicial do adm para colar no jekins e seguir com a configuração inicial.
 
+17 - Listar as redes do docker:
+
+- docker network ls
+
