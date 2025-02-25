@@ -1,7 +1,7 @@
 pipeline {
     agent {
         docker {
-            image 'mcr.microsoft.com/playwright'
+            image 'mcr.microsoft.com/playwright:v1.50.1-noble'
             args '--network qatw-primeira-edicao_skynet'
         }
     }
@@ -9,14 +9,13 @@ pipeline {
     stages {
         stage('Node.js Deps') {
             steps {
-                sh 'npm install -g yarn'
-                sh 'yarn install'
+                sh 'npm install'
 
             }
         }
         stage('E2E Tests') {
             steps {
-                sh 'yarn playwright test'
+                sh 'npx playwright test'
             }
         }
     }
